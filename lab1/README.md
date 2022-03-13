@@ -16,6 +16,8 @@
 
 注意： 编译调试内核比较繁琐，可以利用[操作系统实验1](https://gitee.com/nelsoncheung/sysu-2021-spring-operating-system/tree/main/lab1)中学到的知识，利用qemu 启动新的内核，同时编写测试程序，制作initramfs启动测试程序，观察结果，并利用gdb远程调试。当然也可以不用qemu，利用Virtualbox启动新的内核操作系统, 测试系统调用。
 
+本指导的添加系统调用方式只是其中的一种，同学们可以自由选择其他方式添加系统调用。
+
 ## 安装依赖
 ---
 ```
