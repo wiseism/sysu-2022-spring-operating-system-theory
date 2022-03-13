@@ -1,8 +1,9 @@
 # Lab1
+---
 
 在Linux操作系统内核如5.10或者Linux 0.11 中添加新的系统调用，并且编译、启动新的内核，测试新加入的系统调用的有效性
 
-注意： 编译调试内核比较繁琐，可以利用操作系统实验1中学到的知识，利用qemu 启动新的内核，同时编写测试程序，制作initramfs启动测试程序，观察结果，并利用gdb远程调试。当然也可以不用qemu，利用Virtualbox启动新的内核操作系统, 测试系统调用。
+注意： 编译调试内核比较繁琐，可以利用[操作系统实验1](https://gitee.com/nelsoncheung/sysu-2021-spring-operating-system/tree/main/lab1)中学到的知识，利用qemu 启动新的内核，同时编写测试程序，制作initramfs启动测试程序，观察结果，并利用gdb远程调试。当然也可以不用qemu，利用Virtualbox启动新的内核操作系统, 测试系统调用。
 
 ## 安装依赖
 ---
@@ -38,12 +39,11 @@ sudo apt-get install pkg-config
 解压内核包
 ```
 tar -xvf linux-5.10.105.tar
+cd linux-5.10.105/
 ```
 
 添加自定义的系统调用
 ```
-cd linux-5.10.105/
-
 sudo vim arch/x86/entry/syscalls/syscall_64.tbl
 
 441     common  mysyscall               sys_mysyscall
